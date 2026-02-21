@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Ovulație</title>
+    <meta name="description" content="Află cu precizie ziua ovulației folosind un calculator modern și prietenos.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Calculator Ovulație</h1>
+            <p>Descoperă ziua exactă pe baza ciclului tău menstrual</p>
+        </header>
+
+        <form id="calculatorForm" onsubmit="return false;">
+            <div class="form-group">
+                <label for="date1">Prima zi a menstruației (Luna Anterioară)</label>
+                <div class="date-input-wrapper">
+                    <input type="date" id="date1" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="date2">Prima zi a menstruației (Luna Actuală)</label>
+                <div class="date-input-wrapper">
+                    <input type="date" id="date2" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn" id="calculateBtn">Calculează Acum</button>
+        </form>
+
+        <div id="errorMsg" class="error-msg"></div>
+
+        <div id="resultContainer" class="result-container">
+            <div class="result-item">
+                <div class="result-label">Durata Ciclului Tău</div>
+                <div class="result-value" id="resLength">-</div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Ziua Ovulației</div>
+                <div class="result-value" id="resDay">-</div>
+            </div>
+            <div class="result-item">
+                <div class="result-label">Data Estimată a Ovulației</div>
+                <div class="result-value" id="resDate">-</div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
