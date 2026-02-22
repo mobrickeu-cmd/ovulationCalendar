@@ -88,4 +88,27 @@ document.addEventListener("DOMContentLoaded", () => {
         errorMsg.style.display = 'none';
         errorMsg.textContent = '';
     }
+
+    // --- Logica pentru Modal (Popup Informații) ---
+    const infoBtn = document.getElementById('infoBtn');
+    const infoModal = document.getElementById('infoModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    // Deschide modalul
+    infoBtn.addEventListener('click', () => {
+        infoModal.classList.add('show');
+    });
+
+    // Închide modalul la click pe "X"
+    closeModalBtn.addEventListener('click', () => {
+        infoModal.classList.remove('show');
+    });
+
+    // Închide modalul la click oriunde în afară lui (pe overlay)
+    infoModal.addEventListener('click', (e) => {
+        if (e.target === infoModal) {
+            infoModal.classList.remove('show');
+        }
+    });
+
 });

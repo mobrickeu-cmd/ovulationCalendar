@@ -14,7 +14,10 @@
 <body>
     <main class="container">
         <header class="header">
-            <h1>Calculator Ovulație</h1>
+            <div class="title-wrapper">
+                <h1>Calculator Ovulație</h1>
+                <button id="infoBtn" class="info-btn" title="Află mai multe informații">?</button>
+            </div>
             <p>Descoperă ziua exactă pe baza ciclului tău menstrual</p>
         </header>
 
@@ -53,6 +56,29 @@
             </div>
         </div>
     </main>
+
+    <!-- Modal Informații -->
+    <div id="infoModal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="close-btn">&times;</button>
+            <h2>Semne biologice (Metode mai sigure)</h2>
+            <p>Dacă ciclul tău este neregulat, calculul matematic s-ar putea să dea greș. Corpul tău îți oferă însă
+                indicii clare:</p>
+            <ul>
+                <li><strong>Mucusul cervical:</strong> Devine transparent, elastic și alunecos (asemănător cu albușul de
+                    ou crud).</li>
+                <li><strong>Temperatura bazală:</strong> Crește ușor (cu aproximativ 0,5°C) imediat după ce a avut loc
+                    ovulația.</li>
+                <li><strong>Testele de ovulație:</strong> Acestea măsoară hormonul LH în urină și sunt mult mai precise
+                    decât calendarul.</li>
+            </ul>
+
+            <h3>De ce este greu de prezis cu exactitate?</h3>
+            <p>Stresul, dieta, efortul fizic intens sau micile dezechilibre hormonale pot amâna ovulația. Chiar dacă ai
+                un ciclu "ceas" de 28 de zile, poți ovula în ziua 13 sau 15 într-o lună anume.</p>
+        </div>
+    </div>
+
     <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/ro.js"></script>
