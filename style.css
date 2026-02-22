@@ -30,9 +30,17 @@ body {
 }
 
 @keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
@@ -48,8 +56,15 @@ body {
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .header {
@@ -61,6 +76,7 @@ body {
   font-size: 28px;
   font-weight: 700;
   background: linear-gradient(to right, #ff0844, #ffb199);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
@@ -84,10 +100,10 @@ body {
 }
 
 .date-input-wrapper {
-    position: relative;
+  position: relative;
 }
 
-input[type="date"] {
+.date-picker-input {
   width: 100%;
   padding: 14px 16px;
   border-radius: 12px;
@@ -100,7 +116,7 @@ input[type="date"] {
   font-family: 'Outfit', sans-serif;
 }
 
-input[type="date"]:focus {
+.date-picker-input:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(255, 117, 140, 0.1);
 }
@@ -145,14 +161,21 @@ input[type="date"]:focus {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .result-item {
   margin-bottom: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .result-item:last-child {
@@ -182,13 +205,13 @@ input[type="date"]:focus {
 
 /* Error Message */
 .error-msg {
-    color: #d63031;
-    background: rgba(255, 118, 117, 0.1);
-    padding: 16px;
-    border-radius: 12px;
-    font-size: 14px;
-    margin-top: 20px;
-    display: none;
-    border-left: 4px solid #d63031;
-    animation: fadeIn 0.3s ease;
+  color: #d63031;
+  background: rgba(255, 118, 117, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-top: 20px;
+  display: none;
+  border-left: 4px solid #d63031;
+  animation: fadeIn 0.3s ease;
 }
