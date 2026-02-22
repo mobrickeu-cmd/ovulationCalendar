@@ -5,13 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const errorMsg = document.getElementById('errorMsg');
     const resultContainer = document.getElementById('resultContainer');
 
+    // Inițializare Flatpickr în limba română
+    const flatpickrConfig = {
+        locale: "ro",
+        dateFormat: "Y-m-d", // Formatul folosit în logica js curentă
+        altInput: true,
+        altFormat: "j F Y", // Cum va fi afișat pentru utilizator (ex: 1 Ianuarie 2026)
+        allowInput: true
+    };
+
+    flatpickr(date1Input, flatpickrConfig);
+    flatpickr(date2Input, flatpickrConfig);
+
     const resLength = document.getElementById('resLength');
     const resDay = document.getElementById('resDay');
     const resDate = document.getElementById('resDate');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Ascundem erorile și rezultatul la fiecare nouă încercare
         hideError();
         resultContainer.classList.remove('show');
@@ -44,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const ovulationDay = cycleLength - 14;
 
         if (ovulationDay <= 0) {
-             showError("Ciclul calculat este prea scurt pentru a stabili ovulația prin formula standard.");
-             return;
+            showError("Ciclul calculat este prea scurt pentru a stabili ovulația prin formula standard.");
+            return;
         }
 
         // Calculăm data calendaristică estimată (ziua 1 = date2)

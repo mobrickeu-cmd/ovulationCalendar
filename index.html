@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator Ovulație</title>
     <meta name="description" content="Află cu precizie ziua ovulației folosind un calculator modern și prietenos.">
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main class="container">
         <header class="header">
@@ -18,14 +22,14 @@
             <div class="form-group">
                 <label for="date1">Prima zi a menstruației (Luna Anterioară)</label>
                 <div class="date-input-wrapper">
-                    <input type="date" id="date1" required>
+                    <input type="text" id="date1" class="date-picker-input" placeholder="Alege data" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="date2">Prima zi a menstruației (Luna Actuală)</label>
                 <div class="date-input-wrapper">
-                    <input type="date" id="date2" required>
+                    <input type="text" id="date2" class="date-picker-input" placeholder="Alege data" required>
                 </div>
             </div>
 
@@ -49,6 +53,10 @@
             </div>
         </div>
     </main>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ro.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
